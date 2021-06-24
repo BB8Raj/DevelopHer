@@ -81,7 +81,7 @@ H2 {
 
 button {
     background-color: #3398da;
-    font-family: Verdana, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     color: white;
     display: block;
     border: none;
@@ -91,6 +91,10 @@ button {
     text-transform: uppercase;
     font-weight: bold;
     
+}
+
+button:hover {
+    background-color: darkblue;
 }
 
 #create {
