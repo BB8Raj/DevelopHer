@@ -1,0 +1,62 @@
+h1 {
+    font-family: SeaweedScript-Regular;
+    font-size: 36px;
+}
+
+body {
+    font-family: NanumBrushScript-Regular;
+    background-color: #ccc;
+}
+
+div.polaroid {
+    width: 340px;
+    height: 290px;
+    background-color: white;
+    box-shadow: 4px 6px 2px 0px #999; /* x offset, y offset, blur radius, spread radius */
+    margin-bottom: 25px;
+    margin-left: 25px;
+    float: right;
+    transform: rotate(3deg);
+    border: solid 1px #ddd;
+    
+  }
+
+div.polaroid-left {
+    width: 320px;
+    height: 255px;
+    background-color: white;
+    box-shadow: 4px 4px 1px 0 #999;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    float: left;
+    transform: rotate(-3deg);
+    border: solid 1px #ddd;
+    
+    
+  }
+  
+  div.container {
+    text-align: center;
+    margin-top: -10px;
+    color: #333;
+
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    
+  }
+
+section {
+    background-color: #fff;
+    max-width: 800px;
+    max-height: auto;
+    margin: auto;
+    padding: 2px 50px 50px 45px;
+  
+
+
+}
