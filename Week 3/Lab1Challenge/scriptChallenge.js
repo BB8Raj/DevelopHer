@@ -19,7 +19,7 @@ if (hours <= 40) {
 // without OT at 1819 weeks at $500 a week = $909,500 Saved - Code working (With OT it is  $550 a week saved)
 
 
-while (weeks <= 2000)  
+while (weeklyCheck <= 3000000)  
 {
     if (weeklyCheck <= goal) {
         weeks++;
@@ -34,51 +34,6 @@ while (weeks <= 2000)
 }
 
 
-
-
-while (weeks <= 1818)  
-{
-    if (weeklyCheck <= goal) {
-        weeks++;
-        weeklyCheck+=(500);
-        console.log(Math.round(weeklyCheck));
-    } else {
-        weeks++;
-        console.log(`It took ${weeks} iterations to earn $1,000,000.`);
-        break;
-    }
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*while (hours <= 41)  
-{
-    if (hours <= 40) {
-        console.log(wage*hours);
-    } else {
-        wage*overTimeRate;
-        console.log(wage*overTimeRate);
-        break;
-    }
-    break;
-}
-
-*/
 
 
 
