@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        max-width: auto;
+        margin: auto;
+        background-color: rgb(250, 236, 236);
+        height: 500px;
+        color: black;
+        border-radius: 10px;
+      }
+
+      button {
+        margin-top: 11px;
+        margin-right: 15px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 30px;
+      }
+
+      ul {
+        list-style-type: none;
+        background-color: white;
+        margin-top: 60px;
+        margin-right: 15px;
+        padding: 10px;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      li {
+        padding: 7px;
+      }
+
+      .name {
+        background-color: orangered;
+        color: white;
+        padding: 12px;
+        font-size: 24px;
+      }
+
+      #theLetters,
+      #theNumbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #unoDos {
+        display: none;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        left: -100vw;
+      }
+
+      .menu {
+        visibility: hidden;
+      }
+
+      button + .menu:active,
+      button:focus + .menu {
+        visibility: visible;
+      }
+
+      .aniBtn {
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+
+      .change .bar2 {
+        opacity: 0;
+      }
+
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="name">Unit 4: Dom Exercise 2</div>
+      <nav class="menu2">
+        <div class="aniBtn" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+        </div>
+      </nav>
+      <button id="btnTest">☰</button>
+      <nav class="menu">
+        <ul>
+          <li id="one">
+            <a href="#Letters2" id="abcLinkTest">Letters</a>
+          </li>
+          <li id="two">
+            <a href="#Numbers2" id="numberLinkTest">Numbers</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <section id="theLetters">
+          <div id="abc">
+            <p class="alphabet">A B C D E F G H I J K L M</p>
+            <p class="alphabet">N O P Q R S T U V W X Y Z</p>
+          </div>
+        </section>
+        <section id="theNumbers">
+          <div id="unoDos">
+            <p id="roman">1 2 3 4 5 6 7 8 9 10</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+
+      const button = document.querySelector(".aniBtn");
+      function toggleMenuIcon() {
+        menuIcon.classList.toggle("active");
+      }
+
+      menuIcon.addEventListener("click", toggleMenuIcon);
+
+      const onlyNumbers = document.getElementById("unoDos");
+      const onlyLetters = document.getElementById("abc");
+
+      //Trying other button
+      const hideNumbers2 = document.getElementById("abcLinkTest");
+      hideNumbers2.addEventListener("click", () => {
+        onlyNumbers.style.display = "none";
+        onlyLetters.style.display = "block";
+      });
+
+      const hideLetter2 = document.getElementById("numberLinkTest");
+      hideLetter2.addEventListener("click", () => {
+        onlyLetters.style.display = "none";
+        onlyNumbers.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
