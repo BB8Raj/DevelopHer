@@ -1,0 +1,96 @@
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980b9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+#moolah {
+  padding: 10px;
+  border: 10px outset #3a99ff;
+  background-color: #62a2e6;
+  margin-left: 70px;
+  margin-top: 25px;
+}
+
+input {
+  margin-bottom: 15px;
+  width: auto;
+}
+
+label {
+  margin: 5px;
+}
+
+/* Hides coin images  */
+.coin_images,
+figure {
+  display: none;
+}
+
+.penny {
+  width: 55px;
+  height: 55px;
+}
+
+.nickel {
+  width: 70px;
+  height: 70px;
+}
+
+.dime {
+  width: 50px;
+  height: 50px;
+}
+
+.quarter {
+  width: 78px;
+  height: 78px;
+}
+
+#textFieldTextJS {
+  display: none;
+}
+
+form {
+  width: 450px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

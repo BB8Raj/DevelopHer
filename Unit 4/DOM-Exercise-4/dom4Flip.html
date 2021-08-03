@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="dom4Flip.css" />
+    <title>Dom Exercise 4</title>
+  </head>
+  <body>
+    <section>
+      <form id="moneyForm">
+      <fieldset>
+        <label for="number_input">How many?</label>
+        <input
+          type="number"
+          id="number_input"
+          name="number"
+          placeholder="Pick a number"
+          min="1"
+        />
+        <div class="custom-select" style="width: 200px">
+          <label for="coin_input">Pick a coin</label>
+          <select
+            id="coin_input"
+            class="form-control"
+            name="coinSelect"
+            onclick="singleSelectChangeText()"
+          >
+            <option value="Penny">Penny</option>
+            <option value="Nickel">Nickel</option>
+            <option value="Dime">Dime</option>
+            <option value="Quarter">Quarter</option>
+          </select>
+        </div>
+        <button id="moolah">Make Money!</button>
+        <!-- Removing type="submit" -->
+        </form>
+      </fieldset>
+    </section>
+    <section id="answers">
+      <h1>Viola!</h1>
+      <div id="coin_list"></div>
+      <input
+        type="text"
+        id="textFieldTextJS"
+        class="form-control"
+        placeholder="get value on option select"
+      />
+    </section>
+    <div class="coin_images">
+      <img class="coinPenny" src="penny.jpg" alt="Penny" width="50" height="50">
+      <img class="coinNickel" src="nickel.jpg" alt="Nickel" width="50" height="50">
+      <img class="coinDime" src="dime.jpg" alt="Dime" width="50" height="50">
+      <img class="coinQuarter" src="quarter.jpg" alt="Quarter" width="50" height="50">
+  </div>
+  <figure>
+    <figcaption>Cha Ching:</figcaption>
+    <audio id="cha"
+        controls
+        src="cha-ching.ogg">
+     </audio>
+     <audio id="delete"
+        controls
+        src="item-removal.mp3">
+     </audio>
+</figure>
+
+    <script src="dom4Flip.js"></script>
+  </body>
+</html>
