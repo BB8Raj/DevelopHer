@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
+<html>
+  <head>
+    <base target="_blank" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Aww Lab - Ajax</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="ajaxLab.css" />
+  </head>
+  <body>
+    <ul>
+      <li><button id="all-posts">All Posts</button></li>
+      <li><button id="top-ten">Top Ten</button></li>
+      <li><button id="limited-ten">Top Ten V2</button></li>
+      <li><label>Choose a sub-Reddit: </label></li>
+      <li><input type="text" id="input-sub-reddit" /></li>
+      <li><button id="newReddit" type="submit">Submit</button></li>
+      <li style="float: right"><a class="active" href="#about">Random</a></li>
+    </ul>
+    <h1>Buster's Aww-mazing posts</h1>
+    <div class="background">
+      <div class="transbox">
+        <p id="p1">Click on the image to see the original post</p>
+      </div>
+    </div>
+
+    <section>
+      <div id="array-start"></div>
+    </section>
+    <div id="output"></div>
+    <section id="loop">
+      <div id="div-loop">
+        <ul id="list-start"></ul>
+      </div>
+    </section>
+    <section id="ten-ten">
+      <div id="ten-loop-start"></div>
+    </section>
+    <section id="limit">
+      <div id="limitedJson"></div>
+    </section>
+    <section id="userChoice">
+      <div id="newReddit-start"></div>
+    </section>
+
+    <script src="ajaxLab.js" async defer></script>
+  </body>
+</html>
