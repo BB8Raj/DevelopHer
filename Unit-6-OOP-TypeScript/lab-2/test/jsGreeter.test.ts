@@ -6,12 +6,12 @@ describe("More Salutations", () => {
       "Top of the morning"
     );
     expect(message.greet("Mikey")).toBe(
-      "console.log(Top of the morning, Mikey)"
+      "console.log(Top of the morning, Mikey!!)"
     );
   });
 
   test("Not one less, G", () => {
     const message: JavaScriptGreeter = new JavaScriptGreeter("Not one less");
-    expect(message.greet("G.")).toBe("console.log(Not one less, G.)");
+    expect(message.greet("G")).toBe("console.log(Not one less, G!!)");
   });
 });
