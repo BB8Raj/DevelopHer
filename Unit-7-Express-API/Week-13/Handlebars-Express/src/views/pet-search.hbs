@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Pet Search</title>
+        <link rel="stylesheet" href="/styles.css" />
+    
+    </head>
+    <body>
+        <h1>You are searching for a pet.</h1>
+        <h2>Yay!</h2>
+        {{#each pets}}
+        <div>
+            <span>name: <span class="pet-name">{{name}}</span></span>
+            <span>age: {{age}}</span>
+            <span>favorite toy: {{fave_toy}}</span>
+        </div>
+        {{/each}}
+    </body>
+</html>
