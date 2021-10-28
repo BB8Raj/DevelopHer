@@ -1,0 +1,22 @@
+SELECT * FROM customers;
+SELECT country FROM customers;
+SELECT * FROM customers WHERE customer_id LIKE 'BL%' 
+SELECT * FROM orders LIMIT 100
+SELECT * FROM customers WHERE postal_code IN ('1010', '3012', '12209', '05023')
+SELECT * FROM orders WHERE ship_region NOT IN ('Null')
+SELECT * FROM customers ORDER BY country, city
+INSERT INTO customers(customer_id, company_name, contact_name, contact_title, address, city, region, postal_code, country, phone, fax) 
+VALUES
+	('GRCIR', 'Grand Chirpus', 'Grant Clint', 'Developer', '1001 Woodward', 'Detroit', 'EN', '48221', 'USA', 895551212, 'Null');
+UPDATE orders SET ship_region='EuroZone' WHERE ship_country='France';
+DELETE FROM order_details WHERE quantity=1;
+SELECT AVG(quantity) AS AvgValue, MAX(quantity) AS MaxValue, MIN(quantity) as MinValue FROM order_details
+SELECT AVG(quantity) AS AvgValue, MAX(quantity) AS MaxValue, MIN(quantity) as MinValue FROM order_details GROUP BY order_id
+SELECT customer_id FROM orders WHERE order_id=10290
+Inner Join - SELECT * FROM orders JOIN customers ON orders.customer_id = customers.customer_id
+Join Left - SELECT * FROM orders LEFT JOIN customers ON orders.customer_id = customers.customer_id
+Join Right - SELECT * FROM orders RIGHT JOIN customers ON orders.customer_id = customers.customer_id
+SELECT * FROM orders JOIN employees ON orders.ship_city = orders.ship_country WHERE employees.employee_id = 5
+SELECT * FROM orders JOIN employees ON orders.ship_city = orders.ship_country WHERE employees.employee_id = 5
+SELECT first_name FROM employees  WHERE reports_to IS NULL
+SELECT first_name FROM employees  WHERE reports_to=2
