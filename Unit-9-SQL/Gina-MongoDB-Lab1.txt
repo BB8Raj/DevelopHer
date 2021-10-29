@@ -1,0 +1,34 @@
+db.people.find()
+db.people.count()
+db.people.find( {state: "Arizona"})
+db.people.find( {$and:[{state: "Arizona"}, {gender: 'Male'}]})
+db.people.find( {$or:[{state: "Arizona"}, {state: 'New Mexico'}]})
+db.people.find({age: {$lte: 40}})
+db.people.find({$and:[{state: "Florida"}, {gender: "Female"}, {age: {$gte: 40}}, {age: {$lte: 45}}]})
+db.people.find({first_name: /^H/})
+db.people.find({state: "Michigan"}).sort({first_name: 1});
+db.people.find({$or:[{state: "Virginia"}, {first_name: "Virginia"}]})
+db.people.find({age: {$lte: 30}}, {email: 0, gender: false, age: false, state: false, children: false}, {first_name:1, last_name:1})
+db.people.find({state: "Montana"},{first_name: 1, last_name: 1, gender: 1, children: 1}, {age:0})
+db.people.find({email: /edu$/}, {first_name: false, last_name: false, gender: false, age: false, state: false, children: false})
+
+
+Challenges:
+
+14. db.people.count({ 'children.age': { $lte: 3} } ) or db.people.count({children: {$elemMatch: {age: {$lte: 3}}}})
+
+15. db.people.count({"children": { $size: 0}})
+
+16. db.people.count({ 'children.age': { $gt: 0} } )
+
+
+
+
+
+
+
+
+
+
+
+
