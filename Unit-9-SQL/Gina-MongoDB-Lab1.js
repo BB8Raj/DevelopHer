@@ -29,6 +29,7 @@ Part 2:
 2.db.people.insertOne({ first_name:"Renee", last_name:"Meyers", email:"MyTwoKids@life.com", gender:"Female", age:40, state:"Maine", children:[{"name":"Bryan","age":13},{"name":"Kurt","age":12}]})
 
 3. db.people.updateOne ({ first_name: "Clarence"}, {$set: { state: "South Dakota"}})
+alt: ({ first_name: "Clarence", state: "North Dakota" }, {$set: { state: "South Dakota"}})
 
 4. db.people.updateOne ( { first_name: "Rebecca"}, {$unset: { email: 1}})
 
@@ -41,19 +42,20 @@ Part 2:
 7. db.orders.deleteOne( { "_id" : ObjectId("617b4c28ec714d2a8c60cdf6") } );
 
 8. db.orders.deleteMany( { "email" : null } );
-
+alt: use $exists 
 9. db.submissions.insertMany([
-{"title": "The River Bend", "upvotes": 10, "downvotes": 2, "artist": "617b4c28ec714d2a8c60cd9f"},
-{"title": "Nine Lives", "upvotes": 7, "downvotes": 0, "artist": "617b4c28ec714d2a8c60cdcd"},
-{"title": "Star Bright", "upvotes": 19, "downvotes": 3, "artist": "617b4c28ec714d2a8c60ce50"},
-{"title": "Why Like This?", "upvotes": 1, "downvotes": 5, "artist": "617b4c28ec714d2a8c60cdd6"},
-{"title": "Non Sequitur", "upvotes": 11, "downvotes": 1, "artist": "617b4c28ec714d2a8c60cd9d"}])
+{"title": "The River Bend", "upvotes": 10, "downvotes": 2, "artist": ObjectId("617b4c28ec714d2a8c60cd9f")},
+{"title": "Nine Lives", "upvotes": 7, "downvotes": 0, "artist": ObjectId("617b4c28ec714d2a8c60cdcd")},
+{"title": "Star Bright", "upvotes": 19, "downvotes": 3, "artist": ObjectId("617b4c28ec714d2a8c60ce50")},
+{"title": "Why Like This?", "upvotes": 1, "downvotes": 5, "artist": ObjectId("617b4c28ec714d2a8c60cdd6")},
+{"title": "Non Sequitur", "upvotes": 11, "downvotes": 1, "artist": ObjectId("617b4c28ec714d2a8c60cd9d")}])
 
 10. db.submissions.updateOne( { "_id" : ObjectId("61809e4caec9fa41f5d21ce0")}, {$inc: { upvotes: 2}})
+alt: db.submissions.updateOne({title: "The River Bend"},{$inc: { upvotes: 2}} )
 
 11. db.submissions.aggregate([{$match: {upvotes: {$gte: 10}}}, { $addFields: { round2:  "true" }}])	
 
-12. db.people.updateOne({first_name: "Helen", last_name: "Clark"}. {$push: {children: {name: "Tom", age: 0}}})
+12. db.people.updateOne({first_name: "Helen", last_name: "Clark"}, {$push: {children: {name: "Melanie", age: 0}}})
 
 13. dp.people.updateOne({first_name: "Joan", last_name: "Bishop", "children.3.name":"Cathrine"}, {$set: {"children.3.name": "Cat"}, $inc: {"children.3.age":1}})
 
