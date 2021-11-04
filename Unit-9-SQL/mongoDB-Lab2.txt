@@ -1,0 +1,23 @@
+MONGODB LAB 2 - AGGREGATION
+
+1.db.people.aggregate([{$group: {_id:null, avg: {$avg:"$age"} } }])
+
+2. db.people.aggregate( [{$group:{_id: "$gender", avgAge: { $avg: "$age" }}}])
+
+3.db.people.aggregate( [{$group:{_id: "$gender", count: { $sum: 1 }}}])
+
+
+4. db.people.aggregate( [{ $sort: {age: -1}},{$limit: 3},{$group:{_id: "$first_name",  maxAge: { $max: "$age" }}}])
+
+
+5.db.people.aggregate( [{ $sort: {age: 1}},{$limit: 5},{$group:{_id: "$first_name", maxAge: { $max: "$age" }}}])
+
+
+6.db.people.aggregate([{$group: {_id:null, avg: {$avg:"$age"} } }])
+
+
+db.people.aggregate( [{$group:{_id: "$children", count: { $sum: 1 }}}])
+
+
+db.people.aggregate([{ $project: { KidsAvg: { $avg: "$children"} } }])
+
